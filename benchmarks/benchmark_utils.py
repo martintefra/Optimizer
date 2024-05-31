@@ -18,8 +18,7 @@ def train(model, optimizer_type, train_loader, val_loader, num_epochs=10, device
         optimizer = SignSGD(model.parameters(), lr=0.001)
     else:
         raise ValueError("Optimizer type not supported.")
-    
-    criterion = nn.CrossEntropyLoss()
+
     
     model.train()
     print(f"Training with {optimizer_type}")

@@ -1,6 +1,4 @@
-import time
 import torch
-import torch.nn as nn
 from data.dataset_loader import get_dataset
 from torch.utils.data import random_split
 
@@ -17,7 +15,7 @@ def run_benchmark():
     # "mps" if torch.backends.mps.is_available() else
     device = torch.device( "cuda" if torch.cuda.is_available() else "cpu")
     datasets = ['IMDB']
-    optimizers = ['sgd', 'adam', 'signsgd', 'adagrad']
+    optimizers = ['sgd'] #, 'adam', 'signsgd', 'adagrad']
     
     results = {}
 
@@ -47,6 +45,7 @@ def run_benchmark():
             losses_per_optimizer = {}
             execution_times_per_optimizer = {}
             accuracies_per_optimizer = {}
+
             
             for optimizer_name in optimizers:
                 model = model_class().to(device)
@@ -63,13 +62,24 @@ def run_benchmark():
                 print(f'{optimizer_name}: Accuracy of the network on the test reviews {100 * eval_acc} %')
     
                 accuracies_per_optimizer[optimizer_name] = 100 * eval_acc
+                
+            metrics = {
+                'losses': losses_per_optimizer,
+                'execution_times': execution_times_per_optimizer,
+                'accuracies': accuracies_per_optimizer
+            }
+            with open('measurements.txt', 'a') as f:
+                f.write('\n')
+                f.write(f"Dataset: {dataset_name}, Model: {model_class.__name__}\n")
+                f.write('\n'.join(metrics))
+                f.write('\n')
                     
     return results
 
 def get_models_for_dataset(dataset_name):
     if dataset_name == 'IMDB':
         return [IMDBSimpleNN]
-    elif dataset_name == 'adult':
+    elif dataset_name == 'Adult':
         return [AdultSimpleNN, AdultComplexNN]
     else:
         return None

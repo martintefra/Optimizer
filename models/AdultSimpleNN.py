@@ -4,7 +4,7 @@ from transformers import BertModel
 
 class AdultSimpleNN(nn.Module):
     
-    def __init__(self, input_dim):
+    def __init__(self, input_dim=14):
         super(AdultSimpleNN, self).__init__()
         self.fc1 = nn.Linear(input_dim, 64)
         self.fc2 = nn.Linear(64, 32)
