@@ -1,0 +1,823 @@
+model:simple optimizer:adam epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.6939, Accuracy=0.7654
+Epoch 2: Loss=0.6071, Accuracy=0.7656
+Epoch 3: Loss=0.5455, Accuracy=0.7656
+Epoch 4: Loss=0.5138, Accuracy=0.7656
+Epoch 5: Loss=0.5008, Accuracy=0.7656
+Epoch 6: Loss=0.4836, Accuracy=0.7659
+Epoch 7: Loss=0.4600, Accuracy=0.7751
+Epoch 8: Loss=0.4381, Accuracy=0.7908
+Epoch 9: Loss=0.4227, Accuracy=0.8128
+Epoch 10: Loss=0.4136, Accuracy=0.8250
+Time needed: 0.2148s
+
+
+model:simple optimizer:Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.6356, Accuracy=0.7648
+Epoch 2: Loss=0.6356, Accuracy=0.7648
+Epoch 3: Loss=0.6356, Accuracy=0.7648
+Epoch 4: Loss=0.6356, Accuracy=0.7648
+Epoch 5: Loss=0.6356, Accuracy=0.7648
+Epoch 6: Loss=0.6356, Accuracy=0.7648
+Epoch 7: Loss=0.6356, Accuracy=0.7648
+Epoch 8: Loss=0.6356, Accuracy=0.7648
+Epoch 9: Loss=0.6356, Accuracy=0.7648
+Epoch 10: Loss=0.6356, Accuracy=0.7648
+Epoch 11: Loss=0.6356, Accuracy=0.7648
+Epoch 12: Loss=0.6356, Accuracy=0.7648
+Epoch 13: Loss=0.6356, Accuracy=0.7648
+Epoch 14: Loss=0.6356, Accuracy=0.7648
+Epoch 15: Loss=0.6356, Accuracy=0.7648
+Epoch 16: Loss=0.6356, Accuracy=0.7648
+Epoch 17: Loss=0.6356, Accuracy=0.7648
+Epoch 18: Loss=0.6356, Accuracy=0.7648
+Epoch 19: Loss=0.6356, Accuracy=0.7648
+Epoch 20: Loss=0.6356, Accuracy=0.7648
+Time needed: 0.3492s
+
+
+model:simple optimizer:Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    weight_decay: 0
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.6660, Accuracy=0.7117
+Epoch 2: Loss=0.6660, Accuracy=0.7117
+Epoch 3: Loss=0.6660, Accuracy=0.7117
+Epoch 4: Loss=0.6660, Accuracy=0.7117
+Epoch 5: Loss=0.6660, Accuracy=0.7117
+Epoch 6: Loss=0.6660, Accuracy=0.7117
+Epoch 7: Loss=0.6660, Accuracy=0.7117
+Epoch 8: Loss=0.6660, Accuracy=0.7117
+Epoch 9: Loss=0.6660, Accuracy=0.7117
+Epoch 10: Loss=0.6660, Accuracy=0.7117
+Time needed: 0.1161s
+
+
+model:simple optimizer:Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.6167, Accuracy=0.7656
+Epoch 2: Loss=0.6167, Accuracy=0.7656
+Epoch 3: Loss=0.6167, Accuracy=0.7656
+Epoch 4: Loss=0.6167, Accuracy=0.7656
+Epoch 5: Loss=0.6167, Accuracy=0.7656
+Epoch 6: Loss=0.6167, Accuracy=0.7656
+Epoch 7: Loss=0.6167, Accuracy=0.7656
+Epoch 8: Loss=0.6167, Accuracy=0.7656
+Epoch 9: Loss=0.6167, Accuracy=0.7656
+Epoch 10: Loss=0.6167, Accuracy=0.7656
+Epoch 11: Loss=0.6167, Accuracy=0.7656
+Epoch 12: Loss=0.6167, Accuracy=0.7656
+Epoch 13: Loss=0.6167, Accuracy=0.7656
+Epoch 14: Loss=0.6167, Accuracy=0.7656
+Epoch 15: Loss=0.6167, Accuracy=0.7656
+Epoch 16: Loss=0.6167, Accuracy=0.7656
+Epoch 17: Loss=0.6167, Accuracy=0.7656
+Epoch 18: Loss=0.6167, Accuracy=0.7656
+Epoch 19: Loss=0.6167, Accuracy=0.7656
+Epoch 20: Loss=0.6167, Accuracy=0.7656
+Time needed: 0.2419s
+
+
+model:simple optimizer:adagrad epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.6744, Accuracy=0.7656
+Epoch 2: Loss=0.5853, Accuracy=0.7656
+Epoch 3: Loss=0.5432, Accuracy=0.7708
+Epoch 4: Loss=0.5100, Accuracy=0.7776
+Epoch 5: Loss=0.4831, Accuracy=0.7881
+Epoch 6: Loss=0.4614, Accuracy=0.8009
+Epoch 7: Loss=0.4441, Accuracy=0.8116
+Epoch 8: Loss=0.4306, Accuracy=0.8187
+Epoch 9: Loss=0.4200, Accuracy=0.8231
+Epoch 10: Loss=0.4115, Accuracy=0.8256
+Time needed: 0.1343s
+
+
+model:simple optimizer:Adagrad (
+Parameter Group 0
+    differentiable: False
+    eps: 1e-10
+    foreach: None
+    initial_accumulator_value: 0
+    lr: 0.01
+    lr_decay: 0
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.6320, Accuracy=0.7655
+Epoch 2: Loss=0.6320, Accuracy=0.7655
+Epoch 3: Loss=0.6320, Accuracy=0.7655
+Epoch 4: Loss=0.6320, Accuracy=0.7655
+Epoch 5: Loss=0.6320, Accuracy=0.7655
+Epoch 6: Loss=0.6320, Accuracy=0.7655
+Epoch 7: Loss=0.6320, Accuracy=0.7655
+Epoch 8: Loss=0.6320, Accuracy=0.7655
+Epoch 9: Loss=0.6320, Accuracy=0.7655
+Epoch 10: Loss=0.6320, Accuracy=0.7655
+Epoch 11: Loss=0.6320, Accuracy=0.7655
+Epoch 12: Loss=0.6320, Accuracy=0.7655
+Epoch 13: Loss=0.6320, Accuracy=0.7655
+Epoch 14: Loss=0.6320, Accuracy=0.7655
+Epoch 15: Loss=0.6320, Accuracy=0.7655
+Epoch 16: Loss=0.6320, Accuracy=0.7655
+Epoch 17: Loss=0.6320, Accuracy=0.7655
+Epoch 18: Loss=0.6320, Accuracy=0.7655
+Epoch 19: Loss=0.6320, Accuracy=0.7655
+Epoch 20: Loss=0.6320, Accuracy=0.7655
+Time needed: 0.2135s
+
+
+model:simple optimizer:Adagrad (
+Parameter Group 0
+    differentiable: False
+    eps: 1e-10
+    foreach: None
+    initial_accumulator_value: 0
+    lr: 0.01
+    lr_decay: 0
+    maximize: False
+    weight_decay: 0
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.7037, Accuracy=0.3116
+Epoch 2: Loss=0.7037, Accuracy=0.3116
+Epoch 3: Loss=0.7037, Accuracy=0.3116
+Epoch 4: Loss=0.7037, Accuracy=0.3116
+Epoch 5: Loss=0.7037, Accuracy=0.3116
+Epoch 6: Loss=0.7037, Accuracy=0.3116
+Epoch 7: Loss=0.7037, Accuracy=0.3116
+Epoch 8: Loss=0.7037, Accuracy=0.3116
+Epoch 9: Loss=0.7037, Accuracy=0.3116
+Epoch 10: Loss=0.7037, Accuracy=0.3116
+Time needed: 0.1202s
+
+
+model:simple optimizer:Adagrad (
+Parameter Group 0
+    differentiable: False
+    eps: 1e-10
+    foreach: None
+    initial_accumulator_value: 0
+    lr: 0.01
+    lr_decay: 0
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.7894, Accuracy=0.2344
+Epoch 2: Loss=0.7894, Accuracy=0.2344
+Epoch 3: Loss=0.7894, Accuracy=0.2344
+Epoch 4: Loss=0.7894, Accuracy=0.2344
+Epoch 5: Loss=0.7894, Accuracy=0.2344
+Epoch 6: Loss=0.7894, Accuracy=0.2344
+Epoch 7: Loss=0.7894, Accuracy=0.2344
+Epoch 8: Loss=0.7894, Accuracy=0.2344
+Epoch 9: Loss=0.7894, Accuracy=0.2344
+Epoch 10: Loss=0.7894, Accuracy=0.2344
+Epoch 11: Loss=0.7894, Accuracy=0.2344
+Epoch 12: Loss=0.7894, Accuracy=0.2344
+Epoch 13: Loss=0.7894, Accuracy=0.2344
+Epoch 14: Loss=0.7894, Accuracy=0.2344
+Epoch 15: Loss=0.7894, Accuracy=0.2344
+Epoch 16: Loss=0.7894, Accuracy=0.2344
+Epoch 17: Loss=0.7894, Accuracy=0.2344
+Epoch 18: Loss=0.7894, Accuracy=0.2344
+Epoch 19: Loss=0.7894, Accuracy=0.2344
+Epoch 20: Loss=0.7894, Accuracy=0.2344
+Time needed: 0.2450s
+
+
+model:simple optimizer:signsgd epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.6702, Accuracy=0.7656
+Epoch 2: Loss=0.5961, Accuracy=0.7656
+Epoch 3: Loss=0.5348, Accuracy=0.7745
+Epoch 4: Loss=0.4817, Accuracy=0.7911
+Epoch 5: Loss=0.4402, Accuracy=0.8190
+Epoch 6: Loss=0.4101, Accuracy=0.8198
+Epoch 7: Loss=0.4022, Accuracy=0.7903
+Epoch 8: Loss=0.4420, Accuracy=0.8220
+Epoch 9: Loss=0.3953, Accuracy=0.7923
+Epoch 10: Loss=0.4342, Accuracy=0.8237
+Time needed: 0.1114s
+
+
+model:simple optimizer:SignSGD (
+Parameter Group 0
+    lr: 0.01
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.6649, Accuracy=0.6885
+Epoch 2: Loss=0.6649, Accuracy=0.6885
+Epoch 3: Loss=0.6649, Accuracy=0.6885
+Epoch 4: Loss=0.6649, Accuracy=0.6885
+Epoch 5: Loss=0.6649, Accuracy=0.6885
+Epoch 6: Loss=0.6649, Accuracy=0.6885
+Epoch 7: Loss=0.6649, Accuracy=0.6885
+Epoch 8: Loss=0.6649, Accuracy=0.6885
+Epoch 9: Loss=0.6649, Accuracy=0.6885
+Epoch 10: Loss=0.6649, Accuracy=0.6885
+Epoch 11: Loss=0.6649, Accuracy=0.6885
+Epoch 12: Loss=0.6649, Accuracy=0.6885
+Epoch 13: Loss=0.6649, Accuracy=0.6885
+Epoch 14: Loss=0.6649, Accuracy=0.6885
+Epoch 15: Loss=0.6649, Accuracy=0.6885
+Epoch 16: Loss=0.6649, Accuracy=0.6885
+Epoch 17: Loss=0.6649, Accuracy=0.6885
+Epoch 18: Loss=0.6649, Accuracy=0.6885
+Epoch 19: Loss=0.6649, Accuracy=0.6885
+Epoch 20: Loss=0.6649, Accuracy=0.6885
+Time needed: 0.2243s
+
+
+model:simple optimizer:SignSGD (
+Parameter Group 0
+    lr: 0.01
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.6559, Accuracy=0.7480
+Epoch 2: Loss=0.6559, Accuracy=0.7480
+Epoch 3: Loss=0.6559, Accuracy=0.7480
+Epoch 4: Loss=0.6559, Accuracy=0.7480
+Epoch 5: Loss=0.6559, Accuracy=0.7480
+Epoch 6: Loss=0.6559, Accuracy=0.7480
+Epoch 7: Loss=0.6559, Accuracy=0.7480
+Epoch 8: Loss=0.6559, Accuracy=0.7480
+Epoch 9: Loss=0.6559, Accuracy=0.7480
+Epoch 10: Loss=0.6559, Accuracy=0.7480
+Time needed: 0.1104s
+
+
+model:simple optimizer:SignSGD (
+Parameter Group 0
+    lr: 0.01
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.6936, Accuracy=0.5141
+Epoch 2: Loss=0.6936, Accuracy=0.5141
+Epoch 3: Loss=0.6936, Accuracy=0.5141
+Epoch 4: Loss=0.6936, Accuracy=0.5141
+Epoch 5: Loss=0.6936, Accuracy=0.5141
+Epoch 6: Loss=0.6936, Accuracy=0.5141
+Epoch 7: Loss=0.6936, Accuracy=0.5141
+Epoch 8: Loss=0.6936, Accuracy=0.5141
+Epoch 9: Loss=0.6936, Accuracy=0.5141
+Epoch 10: Loss=0.6936, Accuracy=0.5141
+Epoch 11: Loss=0.6936, Accuracy=0.5141
+Epoch 12: Loss=0.6936, Accuracy=0.5141
+Epoch 13: Loss=0.6936, Accuracy=0.5141
+Epoch 14: Loss=0.6936, Accuracy=0.5141
+Epoch 15: Loss=0.6936, Accuracy=0.5141
+Epoch 16: Loss=0.6936, Accuracy=0.5141
+Epoch 17: Loss=0.6936, Accuracy=0.5141
+Epoch 18: Loss=0.6936, Accuracy=0.5141
+Epoch 19: Loss=0.6936, Accuracy=0.5141
+Epoch 20: Loss=0.6936, Accuracy=0.5141
+Time needed: 0.2671s
+
+
+model:simple optimizer:sgd epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.6208, Accuracy=0.7656
+Epoch 2: Loss=0.6196, Accuracy=0.7656
+Epoch 3: Loss=0.6185, Accuracy=0.7656
+Epoch 4: Loss=0.6174, Accuracy=0.7656
+Epoch 5: Loss=0.6164, Accuracy=0.7656
+Epoch 6: Loss=0.6153, Accuracy=0.7656
+Epoch 7: Loss=0.6142, Accuracy=0.7656
+Epoch 8: Loss=0.6132, Accuracy=0.7656
+Epoch 9: Loss=0.6122, Accuracy=0.7656
+Epoch 10: Loss=0.6112, Accuracy=0.7656
+Time needed: 0.1106s
+
+
+model:simple optimizer:SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.6693, Accuracy=0.6908
+Epoch 2: Loss=0.6693, Accuracy=0.6908
+Epoch 3: Loss=0.6693, Accuracy=0.6908
+Epoch 4: Loss=0.6693, Accuracy=0.6908
+Epoch 5: Loss=0.6693, Accuracy=0.6908
+Epoch 6: Loss=0.6693, Accuracy=0.6908
+Epoch 7: Loss=0.6693, Accuracy=0.6908
+Epoch 8: Loss=0.6693, Accuracy=0.6908
+Epoch 9: Loss=0.6693, Accuracy=0.6908
+Epoch 10: Loss=0.6693, Accuracy=0.6908
+Epoch 11: Loss=0.6693, Accuracy=0.6908
+Epoch 12: Loss=0.6693, Accuracy=0.6908
+Epoch 13: Loss=0.6693, Accuracy=0.6908
+Epoch 14: Loss=0.6693, Accuracy=0.6908
+Epoch 15: Loss=0.6693, Accuracy=0.6908
+Epoch 16: Loss=0.6693, Accuracy=0.6908
+Epoch 17: Loss=0.6693, Accuracy=0.6908
+Epoch 18: Loss=0.6693, Accuracy=0.6908
+Epoch 19: Loss=0.6693, Accuracy=0.6908
+Epoch 20: Loss=0.6693, Accuracy=0.6908
+Time needed: 0.2410s
+
+
+model:simple optimizer:SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.6590, Accuracy=0.7194
+Epoch 2: Loss=0.6590, Accuracy=0.7194
+Epoch 3: Loss=0.6590, Accuracy=0.7194
+Epoch 4: Loss=0.6590, Accuracy=0.7194
+Epoch 5: Loss=0.6590, Accuracy=0.7194
+Epoch 6: Loss=0.6590, Accuracy=0.7194
+Epoch 7: Loss=0.6590, Accuracy=0.7194
+Epoch 8: Loss=0.6590, Accuracy=0.7194
+Epoch 9: Loss=0.6590, Accuracy=0.7194
+Epoch 10: Loss=0.6590, Accuracy=0.7194
+Time needed: 0.1335s
+
+
+model:simple optimizer:SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.7111, Accuracy=0.3417
+Epoch 2: Loss=0.7111, Accuracy=0.3417
+Epoch 3: Loss=0.7111, Accuracy=0.3417
+Epoch 4: Loss=0.7111, Accuracy=0.3417
+Epoch 5: Loss=0.7111, Accuracy=0.3417
+Epoch 6: Loss=0.7111, Accuracy=0.3417
+Epoch 7: Loss=0.7111, Accuracy=0.3417
+Epoch 8: Loss=0.7111, Accuracy=0.3417
+Epoch 9: Loss=0.7111, Accuracy=0.3417
+Epoch 10: Loss=0.7111, Accuracy=0.3417
+Epoch 11: Loss=0.7111, Accuracy=0.3417
+Epoch 12: Loss=0.7111, Accuracy=0.3417
+Epoch 13: Loss=0.7111, Accuracy=0.3417
+Epoch 14: Loss=0.7111, Accuracy=0.3417
+Epoch 15: Loss=0.7111, Accuracy=0.3417
+Epoch 16: Loss=0.7111, Accuracy=0.3417
+Epoch 17: Loss=0.7111, Accuracy=0.3417
+Epoch 18: Loss=0.7111, Accuracy=0.3417
+Epoch 19: Loss=0.7111, Accuracy=0.3417
+Epoch 20: Loss=0.7111, Accuracy=0.3417
+Time needed: 0.2392s
+
+
+model:complex optimizer:adam epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.6711, Accuracy=0.2347
+Epoch 2: Loss=0.5891, Accuracy=0.8083
+Epoch 3: Loss=0.5366, Accuracy=0.8072
+Epoch 4: Loss=0.5008, Accuracy=0.7891
+Epoch 5: Loss=0.4708, Accuracy=0.7868
+Epoch 6: Loss=0.4506, Accuracy=0.7884
+Epoch 7: Loss=0.4347, Accuracy=0.7899
+Epoch 8: Loss=0.4225, Accuracy=0.7937
+Epoch 9: Loss=0.4138, Accuracy=0.7997
+Epoch 10: Loss=0.4056, Accuracy=0.8043
+Time needed: 1.5923s
+
+
+model:complex optimizer:Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.7196, Accuracy=0.2344
+Epoch 2: Loss=0.7211, Accuracy=0.2344
+Epoch 3: Loss=0.7202, Accuracy=0.2344
+Epoch 4: Loss=0.7220, Accuracy=0.2344
+Epoch 5: Loss=0.7223, Accuracy=0.2344
+Epoch 6: Loss=0.7217, Accuracy=0.2344
+Epoch 7: Loss=0.7216, Accuracy=0.2344
+Epoch 8: Loss=0.7200, Accuracy=0.2344
+Epoch 9: Loss=0.7211, Accuracy=0.2344
+Epoch 10: Loss=0.7217, Accuracy=0.2344
+Epoch 11: Loss=0.7204, Accuracy=0.2344
+Epoch 12: Loss=0.7195, Accuracy=0.2344
+Epoch 13: Loss=0.7216, Accuracy=0.2344
+Epoch 14: Loss=0.7208, Accuracy=0.2345
+Epoch 15: Loss=0.7225, Accuracy=0.2348
+Epoch 16: Loss=0.7223, Accuracy=0.2358
+Epoch 17: Loss=0.7217, Accuracy=0.2375
+Epoch 18: Loss=0.7200, Accuracy=0.2396
+Epoch 19: Loss=0.7227, Accuracy=0.2428
+Epoch 20: Loss=0.7197, Accuracy=0.2470
+Time needed: 3.1137s
+
+
+model:complex optimizer:Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    weight_decay: 0
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.6169, Accuracy=0.7656
+Epoch 2: Loss=0.6142, Accuracy=0.7656
+Epoch 3: Loss=0.6175, Accuracy=0.7656
+Epoch 4: Loss=0.6190, Accuracy=0.7656
+Epoch 5: Loss=0.6168, Accuracy=0.7656
+Epoch 6: Loss=0.6176, Accuracy=0.7656
+Epoch 7: Loss=0.6161, Accuracy=0.7656
+Epoch 8: Loss=0.6162, Accuracy=0.7656
+Epoch 9: Loss=0.6177, Accuracy=0.7656
+Epoch 10: Loss=0.6155, Accuracy=0.7656
+Time needed: 1.5268s
+
+
+model:complex optimizer:Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.7866, Accuracy=0.2344
+Epoch 2: Loss=0.7862, Accuracy=0.2344
+Epoch 3: Loss=0.7868, Accuracy=0.2344
+Epoch 4: Loss=0.7891, Accuracy=0.2344
+Epoch 5: Loss=0.7864, Accuracy=0.2344
+Epoch 6: Loss=0.7867, Accuracy=0.2344
+Epoch 7: Loss=0.7869, Accuracy=0.2344
+Epoch 8: Loss=0.7869, Accuracy=0.2344
+Epoch 9: Loss=0.7872, Accuracy=0.2344
+Epoch 10: Loss=0.7870, Accuracy=0.2344
+Epoch 11: Loss=0.7861, Accuracy=0.2344
+Epoch 12: Loss=0.7844, Accuracy=0.2344
+Epoch 13: Loss=0.7861, Accuracy=0.2344
+Epoch 14: Loss=0.7862, Accuracy=0.2344
+Epoch 15: Loss=0.7859, Accuracy=0.2344
+Epoch 16: Loss=0.7857, Accuracy=0.2344
+Epoch 17: Loss=0.7860, Accuracy=0.2344
+Epoch 18: Loss=0.7872, Accuracy=0.2344
+Epoch 19: Loss=0.7870, Accuracy=0.2344
+Epoch 20: Loss=0.7861, Accuracy=0.2344
+Time needed: 3.2574s
+
+
+model:complex optimizer:adagrad epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.6384, Accuracy=0.7656
+Epoch 2: Loss=0.5764, Accuracy=0.7656
+Epoch 3: Loss=0.5308, Accuracy=0.7701
+Epoch 4: Loss=0.4990, Accuracy=0.7711
+Epoch 5: Loss=0.4764, Accuracy=0.7862
+Epoch 6: Loss=0.4589, Accuracy=0.8113
+Epoch 7: Loss=0.4440, Accuracy=0.8218
+Epoch 8: Loss=0.4351, Accuracy=0.8328
+Epoch 9: Loss=0.4257, Accuracy=0.8356
+Epoch 10: Loss=0.4201, Accuracy=0.8403
+Time needed: 1.9971s
+
+
+model:complex optimizer:Adagrad (
+Parameter Group 0
+    differentiable: False
+    eps: 1e-10
+    foreach: None
+    initial_accumulator_value: 0
+    lr: 0.01
+    lr_decay: 0
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.8678, Accuracy=0.2344
+Epoch 2: Loss=0.8673, Accuracy=0.2344
+Epoch 3: Loss=0.8656, Accuracy=0.2344
+Epoch 4: Loss=0.8669, Accuracy=0.2344
+Epoch 5: Loss=0.8672, Accuracy=0.2344
+Epoch 6: Loss=0.8683, Accuracy=0.2344
+Epoch 7: Loss=0.8637, Accuracy=0.2344
+Epoch 8: Loss=0.8668, Accuracy=0.2344
+Epoch 9: Loss=0.8692, Accuracy=0.2344
+Epoch 10: Loss=0.8651, Accuracy=0.2344
+Epoch 11: Loss=0.8678, Accuracy=0.2344
+Epoch 12: Loss=0.8668, Accuracy=0.2344
+Epoch 13: Loss=0.8671, Accuracy=0.2344
+Epoch 14: Loss=0.8661, Accuracy=0.2344
+Epoch 15: Loss=0.8687, Accuracy=0.2344
+Epoch 16: Loss=0.8657, Accuracy=0.2344
+Epoch 17: Loss=0.8664, Accuracy=0.2344
+Epoch 18: Loss=0.8645, Accuracy=0.2344
+Epoch 19: Loss=0.8664, Accuracy=0.2344
+Epoch 20: Loss=0.8678, Accuracy=0.2344
+Time needed: 3.1455s
+
+
+model:complex optimizer:Adagrad (
+Parameter Group 0
+    differentiable: False
+    eps: 1e-10
+    foreach: None
+    initial_accumulator_value: 0
+    lr: 0.01
+    lr_decay: 0
+    maximize: False
+    weight_decay: 0
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.7549, Accuracy=0.2344
+Epoch 2: Loss=0.7545, Accuracy=0.2344
+Epoch 3: Loss=0.7567, Accuracy=0.2344
+Epoch 4: Loss=0.7563, Accuracy=0.2344
+Epoch 5: Loss=0.7567, Accuracy=0.2344
+Epoch 6: Loss=0.7576, Accuracy=0.2344
+Epoch 7: Loss=0.7580, Accuracy=0.2344
+Epoch 8: Loss=0.7558, Accuracy=0.2344
+Epoch 9: Loss=0.7565, Accuracy=0.2344
+Epoch 10: Loss=0.7563, Accuracy=0.2344
+Time needed: 1.5769s
+
+
+model:complex optimizer:Adagrad (
+Parameter Group 0
+    differentiable: False
+    eps: 1e-10
+    foreach: None
+    initial_accumulator_value: 0
+    lr: 0.01
+    lr_decay: 0
+    maximize: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.8535, Accuracy=0.2344
+Epoch 2: Loss=0.8535, Accuracy=0.2344
+Epoch 3: Loss=0.8546, Accuracy=0.2344
+Epoch 4: Loss=0.8530, Accuracy=0.2344
+Epoch 5: Loss=0.8528, Accuracy=0.2344
+Epoch 6: Loss=0.8552, Accuracy=0.2344
+Epoch 7: Loss=0.8555, Accuracy=0.2344
+Epoch 8: Loss=0.8552, Accuracy=0.2344
+Epoch 9: Loss=0.8548, Accuracy=0.2344
+Epoch 10: Loss=0.8536, Accuracy=0.2344
+Epoch 11: Loss=0.8551, Accuracy=0.2344
+Epoch 12: Loss=0.8548, Accuracy=0.2344
+Epoch 13: Loss=0.8536, Accuracy=0.2344
+Epoch 14: Loss=0.8542, Accuracy=0.2344
+Epoch 15: Loss=0.8548, Accuracy=0.2344
+Epoch 16: Loss=0.8538, Accuracy=0.2344
+Epoch 17: Loss=0.8551, Accuracy=0.2344
+Epoch 18: Loss=0.8528, Accuracy=0.2344
+Epoch 19: Loss=0.8534, Accuracy=0.2344
+Epoch 20: Loss=0.8552, Accuracy=0.2344
+Time needed: 3.1361s
+
+
+model:complex optimizer:signsgd epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.6436, Accuracy=0.7656
+Epoch 2: Loss=0.5870, Accuracy=0.7656
+Epoch 3: Loss=0.5370, Accuracy=0.7656
+Epoch 4: Loss=0.4968, Accuracy=0.7656
+Epoch 5: Loss=0.4726, Accuracy=0.7895
+Epoch 6: Loss=0.4533, Accuracy=0.7806
+Epoch 7: Loss=0.4325, Accuracy=0.8173
+Epoch 8: Loss=0.4198, Accuracy=0.8292
+Epoch 9: Loss=0.4053, Accuracy=0.8240
+Epoch 10: Loss=0.4032, Accuracy=0.8192
+Time needed: 1.9147s
+
+
+model:complex optimizer:SignSGD (
+Parameter Group 0
+    lr: 0.01
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.6833, Accuracy=0.2344
+Epoch 2: Loss=0.6802, Accuracy=0.2344
+Epoch 3: Loss=0.6797, Accuracy=0.2344
+Epoch 4: Loss=0.6807, Accuracy=0.2344
+Epoch 5: Loss=0.6807, Accuracy=0.2344
+Epoch 6: Loss=0.6824, Accuracy=0.2344
+Epoch 7: Loss=0.6801, Accuracy=0.2344
+Epoch 8: Loss=0.6835, Accuracy=0.2344
+Epoch 9: Loss=0.6816, Accuracy=0.2344
+Epoch 10: Loss=0.6830, Accuracy=0.2344
+Epoch 11: Loss=0.6813, Accuracy=0.2344
+Epoch 12: Loss=0.6795, Accuracy=0.2346
+Epoch 13: Loss=0.6813, Accuracy=0.2345
+Epoch 14: Loss=0.6821, Accuracy=0.2353
+Epoch 15: Loss=0.6805, Accuracy=0.2352
+Epoch 16: Loss=0.6820, Accuracy=0.2355
+Epoch 17: Loss=0.6811, Accuracy=0.2352
+Epoch 18: Loss=0.6823, Accuracy=0.2363
+Epoch 19: Loss=0.6817, Accuracy=0.2368
+Epoch 20: Loss=0.6805, Accuracy=0.2375
+Time needed: 3.6218s
+
+
+model:complex optimizer:SignSGD (
+Parameter Group 0
+    lr: 0.01
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.6430, Accuracy=0.2356
+Epoch 2: Loss=0.6426, Accuracy=0.2865
+Epoch 3: Loss=0.6446, Accuracy=0.4658
+Epoch 4: Loss=0.6447, Accuracy=0.6389
+Epoch 5: Loss=0.6436, Accuracy=0.7114
+Epoch 6: Loss=0.6437, Accuracy=0.7375
+Epoch 7: Loss=0.6444, Accuracy=0.7440
+Epoch 8: Loss=0.6451, Accuracy=0.7471
+Epoch 9: Loss=0.6444, Accuracy=0.7501
+Epoch 10: Loss=0.6425, Accuracy=0.7530
+Time needed: 1.6083s
+
+
+model:complex optimizer:SignSGD (
+Parameter Group 0
+    lr: 0.01
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.8203, Accuracy=0.7656
+Epoch 2: Loss=0.8206, Accuracy=0.7656
+Epoch 3: Loss=0.8204, Accuracy=0.7656
+Epoch 4: Loss=0.8211, Accuracy=0.7656
+Epoch 5: Loss=0.8203, Accuracy=0.7656
+Epoch 6: Loss=0.8200, Accuracy=0.7656
+Epoch 7: Loss=0.8192, Accuracy=0.7656
+Epoch 8: Loss=0.8192, Accuracy=0.7656
+Epoch 9: Loss=0.8168, Accuracy=0.7656
+Epoch 10: Loss=0.8205, Accuracy=0.7656
+Epoch 11: Loss=0.8211, Accuracy=0.7656
+Epoch 12: Loss=0.8211, Accuracy=0.7657
+Epoch 13: Loss=0.8205, Accuracy=0.7658
+Epoch 14: Loss=0.8180, Accuracy=0.7664
+Epoch 15: Loss=0.8196, Accuracy=0.7677
+Epoch 16: Loss=0.8186, Accuracy=0.7687
+Epoch 17: Loss=0.8220, Accuracy=0.7686
+Epoch 18: Loss=0.8212, Accuracy=0.7668
+Epoch 19: Loss=0.8192, Accuracy=0.7639
+Epoch 20: Loss=0.8171, Accuracy=0.7613
+Time needed: 3.2806s
+
+
+model:complex optimizer:sgd epochs:10 learning_rate:0.01
+Epoch 1: Loss=0.7169, Accuracy=0.2344
+Epoch 2: Loss=0.7126, Accuracy=0.2344
+Epoch 3: Loss=0.7076, Accuracy=0.2344
+Epoch 4: Loss=0.7028, Accuracy=0.2345
+Epoch 5: Loss=0.7040, Accuracy=0.3665
+Epoch 6: Loss=0.6958, Accuracy=0.6759
+Epoch 7: Loss=0.6942, Accuracy=0.7418
+Epoch 8: Loss=0.6931, Accuracy=0.7569
+Epoch 9: Loss=0.6872, Accuracy=0.7621
+Epoch 10: Loss=0.6825, Accuracy=0.7652
+Time needed: 1.6734s
+
+
+model:complex optimizer:SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.01
+Epoch 1: Loss=0.9241, Accuracy=0.7656
+Epoch 2: Loss=0.9264, Accuracy=0.7656
+Epoch 3: Loss=0.9282, Accuracy=0.7656
+Epoch 4: Loss=0.9282, Accuracy=0.7656
+Epoch 5: Loss=0.9250, Accuracy=0.7656
+Epoch 6: Loss=0.9279, Accuracy=0.7656
+Epoch 7: Loss=0.9247, Accuracy=0.7656
+Epoch 8: Loss=0.9264, Accuracy=0.7661
+Epoch 9: Loss=0.9258, Accuracy=0.7675
+Epoch 10: Loss=0.9284, Accuracy=0.7679
+Epoch 11: Loss=0.9307, Accuracy=0.7667
+Epoch 12: Loss=0.9246, Accuracy=0.7635
+Epoch 13: Loss=0.9284, Accuracy=0.7566
+Epoch 14: Loss=0.9276, Accuracy=0.7442
+Epoch 15: Loss=0.9263, Accuracy=0.7278
+Epoch 16: Loss=0.9293, Accuracy=0.7124
+Epoch 17: Loss=0.9262, Accuracy=0.6980
+Epoch 18: Loss=0.9196, Accuracy=0.6776
+Epoch 19: Loss=0.9258, Accuracy=0.6561
+Epoch 20: Loss=0.9282, Accuracy=0.6362
+Time needed: 3.6324s
+
+
+model:complex optimizer:SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+) epochs:10 learning_rate:0.02
+Epoch 1: Loss=0.6447, Accuracy=0.7656
+Epoch 2: Loss=0.6432, Accuracy=0.7656
+Epoch 3: Loss=0.6446, Accuracy=0.7656
+Epoch 4: Loss=0.6452, Accuracy=0.7656
+Epoch 5: Loss=0.6457, Accuracy=0.7656
+Epoch 6: Loss=0.6447, Accuracy=0.7656
+Epoch 7: Loss=0.6464, Accuracy=0.7656
+Epoch 8: Loss=0.6462, Accuracy=0.7653
+Epoch 9: Loss=0.6445, Accuracy=0.7648
+Epoch 10: Loss=0.6446, Accuracy=0.7645
+Time needed: 1.7877s
+
+
+model:complex optimizer:SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    lr: 0.01
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+) epochs:20 learning_rate:0.02
+Epoch 1: Loss=0.6590, Accuracy=0.7656
+Epoch 2: Loss=0.6590, Accuracy=0.7656
+Epoch 3: Loss=0.6580, Accuracy=0.7656
+Epoch 4: Loss=0.6541, Accuracy=0.7656
+Epoch 5: Loss=0.6581, Accuracy=0.7657
+Epoch 6: Loss=0.6618, Accuracy=0.7426
+Epoch 7: Loss=0.6572, Accuracy=0.6045
+Epoch 8: Loss=0.6595, Accuracy=0.4346
+Epoch 9: Loss=0.6546, Accuracy=0.3373
+Epoch 10: Loss=0.6607, Accuracy=0.2903
+Epoch 11: Loss=0.6595, Accuracy=0.2716
+Epoch 12: Loss=0.6551, Accuracy=0.2609
+Epoch 13: Loss=0.6606, Accuracy=0.2542
+Epoch 14: Loss=0.6590, Accuracy=0.2506
+Epoch 15: Loss=0.6579, Accuracy=0.2481
+Epoch 16: Loss=0.6558, Accuracy=0.2471
+Epoch 17: Loss=0.6589, Accuracy=0.2470
+Epoch 18: Loss=0.6565, Accuracy=0.2470
+Epoch 19: Loss=0.6573, Accuracy=0.2476
+Epoch 20: Loss=0.6585, Accuracy=0.2478
+Time needed: 3.4427s
+
