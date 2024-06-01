@@ -4,6 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
 
+from models.ImageNet import SimpleImageNet, DeeperImageNet
 
 
 def train(net, trainloader, optimizer, scheduler=None, device='cpu', epochs=3):
@@ -46,18 +47,11 @@ def train(net, trainloader, optimizer, scheduler=None, device='cpu', epochs=3):
     return losses
 
 
-def train_wrapper(net, optimizer, trainloader, scheduler=None, layer_wise=False, device='cpu'):
-    net = net().to(device)
+def train_wrapper(model, optimizer, trainloader, scheduler=None, layer_wise=False, device='cpu'):
+    net = model().to(device)
     net.train()
     if layer_wise:
-        optimizer = optimizer([
-            {'params': net.conv1.parameters(), 'lr': 0.001},
-            {'params': net.pool.parameters(), 'lr': 0.001},
-            {'params': net.conv2.parameters(), 'lr': 0.001},
-            {'params': net.fc1.parameters(), 'lr': 0.001},
-            {'params': net.fc2.parameters(), 'lr': 0.001},
-            {'params': net.fc3.parameters(), 'lr': 0.001},
-        ], lr=0.001)
+        optimizer = optimizer(optimizer_params(model), lr=0.001)
     else:
         optimizer = optimizer(net.parameters(), lr=0.001)
     losses = train(net, trainloader, optimizer, scheduler=None, device=device)
@@ -76,3 +70,35 @@ def generate_plots(losses_arr, labels):
     plt.title(f"Plot of loss for different optimizers")
     plt.savefig('outputs/loss_plot.png')
     plt.show()
+    
+
+def optimizer_params(model):
+    
+    if model == SimpleImageNet:
+        return [
+            {'params': model.conv1.parameters(), 'lr': 0.001},
+            {'params': model.pool.parameters(), 'lr': 0.001},
+            {'params': model.conv2.parameters(), 'lr': 0.001},
+            {'params': model.fc1.parameters(), 'lr': 0.001},
+            {'params': model.fc2.parameters(), 'lr': 0.001},
+            {'params': model.fc3.parameters(), 'lr': 0.001},
+        ]
+        
+    if model == DeeperImageNet:
+        return [
+            {'params': model.conv1.parameters(), 'lr': 0.001},
+            {'params': model.bn1.parameters(), 'lr': 0.001},
+            {'params': model.conv2.parameters(), 'lr': 0.001},
+            {'params': model.bn2.parameters(), 'lr': 0.001},
+            {'params': model.conv3.parameters(), 'lr': 0.001},
+            {'params': model.bn3.parameters(), 'lr': 0.001},
+            {'params': model.conv4.parameters(), 'lr': 0.001},
+            {'params': model.bn4.parameters(), 'lr': 0.001},
+            {'params': model.conv5.parameters(), 'lr': 0.001},
+            {'params': model.bn5.parameters(), 'lr': 0.001},
+            {'params': model.conv6.parameters(), 'lr': 0.001},
+            {'params': model.bn6.parameters(), 'lr': 0.001},
+            {'params': model.fc1.parameters(), 'lr': 0.001},
+            {'params': model.fc2.parameters(), 'lr': 0.001},
+            {'params': model.fc3.parameters(), 'lr': 0.001},
+        ]
