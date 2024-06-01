@@ -1,5 +1,0 @@
-
-Dataset: IMDB, Model: IMDBSimpleNN
-losses
-execution_times
-accuracies
