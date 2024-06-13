@@ -1,5 +1,7 @@
 import argparse
 import torch
+import pandas as pd
+
 import torchvision
 import torchvision.transforms as transforms
 from my_utils import run_benchmark,plot,run_benchmark_cifar
@@ -17,7 +19,6 @@ if __name__ == '__main__':
 
     if args.dataset == 'adult':
         num_epochs = 100
-        import pandas as pd
         # read data
         data = pd.read_csv("./datasets/adult.csv")
         losses = run_benchmark(data,args.complex,args.opti,args.layerwise,num_epoch=num_epochs)

@@ -47,6 +47,7 @@ def train(net, trainloader, optimizer, scheduler=None, device='cpu', epochs=3):
     return losses
 
 
+
 def train_wrapper(model, optimizer, trainloader, scheduler=None, layer_wise=False, device='cpu'):
     net = model().to(device)
     net.train()
