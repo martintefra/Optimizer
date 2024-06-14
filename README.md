@@ -42,15 +42,22 @@ Before running this project, ensure you have the following installed:
 **Install requirements**
 To install the required packages, run the following command:
 
+```sh 
 pip install -r requirements.txt
+```
 
 
 
 ## Train and evaluate the models using the different optimizers
 Run the code on a specific dataset and optionally choose the complex model (default: simple).
 
-`python3 run.py --dataset <adult|cifar> [--complex]`
+```sh
+python3 run.py --dataset <adult|cifar> [--complex]
+```
 
 
 **Note:**
 You may need to adjust the variable `folder_path` to match your own environment.
+
+## About
+Optimizer was developed as the project of the MSc. level course of EPFL: "Optimization for machine learning"
