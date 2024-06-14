@@ -63,6 +63,7 @@ def get_optimizer(name, model_parameters, lr=0.01, momentum=0.9, weight_decay=0.
     Returns:
         Optimizer: The specified optimizer initialized with the given hyperparameters.
     """
+    
     if name == 'sgd':
         return optim.SGD(model_parameters, lr=lr, momentum=momentum, weight_decay=weight_decay)
     elif name == 'adam':
@@ -75,9 +76,6 @@ def get_optimizer(name, model_parameters, lr=0.01, momentum=0.9, weight_decay=0.
         return optim.Adagrad(model_parameters, lr=lr, weight_decay=weight_decay)
     else:
         raise ValueError(f"Unknown optimizer: {name}")
-
-
-
 
 #=========================================================
 #==== Functions to train / evaluate the Adult dataset ====
@@ -124,7 +122,7 @@ def evaluate_adult_model(model, X_test, y_test):
         accuracy = accuracy_score(y_test, predicted)
     return accuracy
 
-def run_adult_benchmark(data, use_complex_model, optimizer_name, max_iterations, sched_patience=3, sched_factor=0.1, lr=0.01, momentum=0.9, weight_decay=0.0005, debug=False):
+def run_adult_benchmark(data, use_complex_model, optimizer_name, max_iterations, layerwise=False, sched_patience=3, sched_factor=0.1, lr=0.01, momentum=0.9, weight_decay=0.0005, debug=False):
     """
     Run a benchmark on the Adult dataset.
 
@@ -144,7 +142,7 @@ def run_adult_benchmark(data, use_complex_model, optimizer_name, max_iterations,
         tuple: A tuple containing the list of losses, final accuracy, and convergence iteration.
     """
     print(f'Running benchmark:')
-    print(f'Model: Adult, Complex: {use_complex_model}, Optimizer: {optimizer_name}')
+    print(f'Model: Adult, Complex: {use_complex_model}, Optimizer: {optimizer_name}, Layerwise: {layerwise}')
 
     # Preprocess data
     data = preprocess_adult_data(data)
@@ -156,7 +154,26 @@ def run_adult_benchmark(data, use_complex_model, optimizer_name, max_iterations,
     # Define model, loss function, optimizer, and scheduler
     criterion = nn.CrossEntropyLoss()
     model = AdultComplexNN(dim) if use_complex_model else AdultSimpleNN(dim)
-    optimizer = get_optimizer(optimizer_name, model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
+
+    if layerwise:
+        if use_complex_model:
+            model_parameters = [
+                {'params': model.fc1.parameters(), 'lr': lr},
+                {'params': model.fc2.parameters(), 'lr': lr * 0.9},
+                {'params': model.fc3.parameters(), 'lr': lr * 0.8},
+                {'params': model.fc4.parameters(), 'lr': lr * 0.7},
+                ]
+        else:
+            model_parameters = [
+                {'params': model.fc1.parameters(), 'lr': lr},
+                {'params': model.fc2.parameters(), 'lr': lr * 0.9},
+                {'params': model.fc3.parameters(), 'lr': lr * 0.8}
+                ]
+    else:
+        model_parameters = model.parameters()
+
+
+    optimizer = get_optimizer(optimizer_name, model_parameters, lr=lr, momentum=momentum, weight_decay=weight_decay)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', patience=sched_patience, factor=sched_factor, verbose=True)
 
     # Early stopping variables
@@ -435,7 +452,7 @@ def split_and_scale_data(data):
 #==== Functions to run the training and evaluation ====
 #=======================================================
 
-def run_experiment(optimizer_name, use_complex_model, dataset, max_iter=180, sched_patience=50, sched_factor=0.1, lr=0.1, momentum=0.9, weight_decay=0.0005, debug=True):
+def run_experiment(optimizer_name, use_complex_model, dataset, use_layerwise=False, max_iter=180, sched_patience=50, sched_factor=0.1, lr=0.1, momentum=0.9, weight_decay=0.0005, debug=True):
     """
     Run a training and evaluation experiment on the specified dataset.
 
@@ -443,6 +460,7 @@ def run_experiment(optimizer_name, use_complex_model, dataset, max_iter=180, sch
         optimizer_name (str): The name of the optimizer to use.
         use_complex_model (bool): Whether to use a complex model.
         dataset (str): The dataset to use ('adult' or 'cifar').
+        use_layerwise (Bool): To use the layer wise architecture 
         max_iter (int): The maximum number of training iterations. Default is 180.
         sched_patience (int): Patience for the learning rate scheduler. Default is 50.
         sched_factor (float): Factor for the learning rate scheduler. Default is 0.1.
@@ -458,20 +476,22 @@ def run_experiment(optimizer_name, use_complex_model, dataset, max_iter=180, sch
         # Load and preprocess the Adult dataset
         data = get_data_loaders('adult')
         losses, final_accuracy, convergence_iter = run_adult_benchmark(
-            data, use_complex_model, optimizer_name, max_iterations=max_iter,
+            data, use_complex_model, optimizer_name, max_iterations=max_iter, layerwise=use_layerwise,
             sched_patience=sched_patience, sched_factor=sched_factor,
             lr=lr, momentum=momentum, weight_decay=weight_decay, debug=debug
         )
         return losses, final_accuracy, convergence_iter
 
+    
     elif dataset == 'cifar':
         # Load CIFAR-10 train and test data loaders
         trainloader, testloader = get_data_loaders('cifar')
+
+
         losses, final_accuracy, convergence_iter = run_benchmark_cifar(
-            trainloader, testloader, use_complex_model, optimizer_name, max_iter=max_iter,
+            trainloader, testloader, use_complex_model, optimizer_name, max_iter=2,
             sched_patience=sched_patience, sched_factor=sched_factor,
-            lr=lr, momentum=momentum, weight_decay=weight_decay
-        )
+            lr=0.001, momentum=0.9, weight_decay=0.0005)
         return losses, final_accuracy, convergence_iter
 
 
@@ -495,7 +515,7 @@ def plot_loss(data, store=True, show=True, directory='plots', filename='loss_plo
     
     plt.figure(figsize=(10, 6))  # Increase figure size for better legend display
     for k, v in data.items():
-        label = f"{k[0]} - {'Complex' if k[1] == 'complex' else 'Simple'}"
+        label = f"{k[0]} - {'Complex' if k[1] == 'complex' else 'Simple'} {'- LW' if k[2] == 'True' else ''}"
         smoothed_loss = np.convolve(v, np.ones(5)/5, mode='valid')  # Apply moving average
         plt.plot(range(len(smoothed_loss)), smoothed_loss, label=label)
     plt.legend(loc='upper right', fontsize='small', fancybox=True, framealpha=0.7)
@@ -591,7 +611,7 @@ def print_results_table(results, dataset_name):
         dataset_name (str): Name of the dataset.
     """
     print(f"\n{dataset_name} Dataset Results")
-    print(f"{'Optimizer':<10} {'Model':<10} {'Accuracy':<10} {'Convergence Iter':<15}")
+    print(f"{'Optimizer':<10} {'Model':<10} {'Layerwise':<10} {'Accuracy':<10} {'Convergence Iter':<15}")
     print("="*65)
-    for (optimizer, model), (accuracy, convergence_iter) in results.items():
-        print(f"{optimizer:<10} {model:<10} {accuracy:<10.2f} {convergence_iter:<15}")
+    for (optimizer, model, layerwise), (accuracy, convergence_iter) in results.items():
+        print(f"{optimizer:<10} {model:<10} {layerwise:<10} {accuracy:<10.2f} {convergence_iter:<15}")

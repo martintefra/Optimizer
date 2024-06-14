@@ -47,8 +47,9 @@ pip install -r requirements.txt
 
 
 ## Train and evaluate the models using the different optimizers
-explain where and how to run ...
-`python3 run.py --dataset <adult|cifar> `
+Run the code on a specific dataset and optionally choose the complex model (default: simple).
+
+`python3 run.py --dataset <adult|cifar> [--complex]`
 
 
 **Note:**
