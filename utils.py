@@ -468,7 +468,7 @@ def run_experiment(optimizer_name, use_complex_model, dataset, max_iter=180, sch
         # Load CIFAR-10 train and test data loaders
         trainloader, testloader = get_data_loaders('cifar')
         losses, final_accuracy, convergence_iter = run_benchmark_cifar(
-            trainloader, testloader, use_complex_model, optimizer_name, max_iterations=max_iter,
+            trainloader, testloader, use_complex_model, optimizer_name, max_iter=max_iter,
             sched_patience=sched_patience, sched_factor=sched_factor,
             lr=lr, momentum=momentum, weight_decay=weight_decay
         )
